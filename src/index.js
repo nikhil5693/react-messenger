@@ -4,14 +4,9 @@ import { Provider } from 'react-redux'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { init } from '@rematch/core';
-import * as models from './models';
+import store from './store';
 
-const store = init({
-    models,
-});
-
-ReactDOM.render(  <Provider store={store}>
+ReactDOM.render(<Provider store={store}>
     <App />
 </Provider>, document.getElementById('root'));
 
